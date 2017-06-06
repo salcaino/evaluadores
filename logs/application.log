@@ -1,0 +1,31 @@
+2017-06-06 15:54:22,113 [INFO] from akka.event.slf4j.Slf4jLogger in application-akka.actor.default-dispatcher-3 - Slf4jLogger started
+2017-06-06 15:54:22,141 [INFO] from play.api.Play in ForkJoinPool-2-worker-1 - Application started (Dev)
+2017-06-06 15:54:22,412 [INFO] from application in ForkJoinPool.commonPool-worker-0 - GET /login took 175ms and returned 200
+2017-06-06 15:54:22,638 [INFO] from application in ForkJoinPool.commonPool-worker-0 - GET /assets/stylesheets/style.css took 115ms and returned 200
+2017-06-06 15:54:25,534 [INFO] from controllers.LoginController in application-akka.actor.default-dispatcher-2 - Username is: asd
+2017-06-06 15:54:25,534 [INFO] from controllers.LoginController in application-akka.actor.default-dispatcher-2 - Password is: asd
+2017-06-06 15:54:25,534 [INFO] from application in ForkJoinPool.commonPool-worker-0 - POST /login took 349ms and returned 303
+2017-06-06 15:54:25,564 [INFO] from application in ForkJoinPool.commonPool-worker-0 - GET /main took 15ms and returned 200
+2017-06-06 15:54:25,649 [INFO] from application in ForkJoinPool.commonPool-worker-0 - GET /assets/bootstrap/css/simple-sidebar.css took 18ms and returned 304
+2017-06-06 15:54:25,663 [INFO] from application in ForkJoinPool.commonPool-worker-2 - GET /assets/bootstrap/js/jquery.js took 28ms and returned 304
+2017-06-06 15:54:25,663 [INFO] from application in ForkJoinPool.commonPool-worker-2 - GET /assets/bootstrap/css/bootstrap.min.css took 49ms and returned 304
+2017-06-06 15:54:25,663 [INFO] from application in ForkJoinPool.commonPool-worker-2 - GET /assets/css/style.css took 51ms and returned 404
+2017-06-06 15:54:25,668 [INFO] from application in ForkJoinPool.commonPool-worker-2 - GET /assets/bootstrap/js/bootstrap.min.js took 7ms and returned 304
+2017-06-06 15:54:52,710 [INFO] from application in ForkJoinPool.commonPool-worker-3 - GET /ingreso took 7ms and returned 200
+2017-06-06 15:54:52,760 [INFO] from application in ForkJoinPool.commonPool-worker-3 - GET /assets/css/style.css took 5ms and returned 404
+2017-06-06 15:54:52,801 [INFO] from application in ForkJoinPool.commonPool-worker-3 - GET /assets/bootstrap/css/simple-sidebar.css took 34ms and returned 304
+2017-06-06 15:54:52,802 [INFO] from application in ForkJoinPool.commonPool-worker-3 - GET /assets/bootstrap/js/bootstrap.min.js took 25ms and returned 304
+2017-06-06 15:54:52,802 [INFO] from application in ForkJoinPool.commonPool-worker-3 - GET /assets/bootstrap/css/bootstrap.min.css took 39ms and returned 304
+2017-06-06 15:54:52,808 [INFO] from application in ForkJoinPool.commonPool-worker-3 - GET /assets/bootstrap/js/jquery.js took 12ms and returned 304
+2017-06-06 15:54:57,227 [INFO] from application in ForkJoinPool.commonPool-worker-3 - GET /ingreso took 9ms and returned 200
+2017-06-06 15:54:57,312 [INFO] from application in ForkJoinPool.commonPool-worker-3 - GET /assets/bootstrap/css/bootstrap.min.css took 34ms and returned 304
+2017-06-06 15:54:57,312 [INFO] from application in ForkJoinPool.commonPool-worker-3 - GET /assets/bootstrap/css/simple-sidebar.css took 34ms and returned 304
+2017-06-06 15:54:57,327 [INFO] from application in ForkJoinPool.commonPool-worker-1 - GET /assets/bootstrap/js/jquery.js took 31ms and returned 304
+2017-06-06 15:54:57,338 [INFO] from application in ForkJoinPool.commonPool-worker-1 - GET /assets/bootstrap/js/bootstrap.min.js took 34ms and returned 304
+2017-06-06 15:54:57,338 [INFO] from application in ForkJoinPool.commonPool-worker-2 - GET /assets/css/style.css took 61ms and returned 404
+2017-06-06 15:54:58,393 [INFO] from application in ForkJoinPool.commonPool-worker-2 - GET /ingreso took 4ms and returned 200
+2017-06-06 15:54:58,446 [INFO] from application in ForkJoinPool.commonPool-worker-2 - GET /assets/css/style.css took 8ms and returned 404
+2017-06-06 15:54:58,446 [INFO] from application in ForkJoinPool.commonPool-worker-2 - GET /assets/bootstrap/css/bootstrap.min.css took 6ms and returned 304
+2017-06-06 15:54:58,464 [INFO] from application in ForkJoinPool.commonPool-worker-1 - GET /assets/bootstrap/css/simple-sidebar.css took 10ms and returned 304
+2017-06-06 15:54:58,466 [INFO] from application in ForkJoinPool.commonPool-worker-1 - GET /assets/bootstrap/js/jquery.js took 20ms and returned 304
+2017-06-06 15:54:58,474 [INFO] from application in ForkJoinPool.commonPool-worker-1 - GET /assets/bootstrap/js/bootstrap.min.js took 17ms and returned 304

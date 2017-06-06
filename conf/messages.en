@@ -1,0 +1,7 @@
+login.title=Evaluators login
+main.title=Welcome
+login.remember=Remember me on this computer
+login.user.placeholder=Username or Email
+login.pwd.placeholder=Password
+login.pwd.forgot=Forgot your password?
+login.pwd.reset=Click here to reset it
