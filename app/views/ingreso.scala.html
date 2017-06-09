@@ -1,3 +1,161 @@
 @()
 
-<div>Hello world again!!</div>
+
+<!-- <form method="post" action="@routes.IngresoController.doPost"> -->
+<!--    <p><input type="text" name="login" value="" placeholder="@Messages("login.user.placeholder")"></p> -->
+<!--         <p><input type="password" name="password" value="" placeholder="@Messages("login.pwd.placeholder")"></p> -->
+<!--         <p class="remember_me"> -->
+<!--           <label> -->
+<!--             <input type="checkbox" name="remember_me" id="remember_me"> -->
+<!--             @Messages("login.remember") -->
+<!--         </label> -->
+<!--       </p> -->
+<!--       <p class="submit"><input type="submit" name="commit" value="Login"></p> -->
+<!-- </form> -->
+<div class="container">
+    <div class="row">
+		<section>
+        <div class="wizard">
+            <div class="wizard-inner">
+                <div class="connecting-line"></div>
+                <ul class="nav nav-tabs" role="tablist">
+
+                    <li role="presentation" class="active">
+                        <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Ingresar Datos">
+                            <span class="round-tab">
+                                <i class="glyphicon glyphicon-pencil"></i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li role="presentation" class="disabled">
+                        <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Seleccionar Test">
+                            <span class="round-tab">
+                                <i class="glyphicon glyphicon-list"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li role="presentation" class="disabled">
+                        <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Subir Resultados">
+                            <span class="round-tab">
+                                <i class="glyphicon glyphicon-paperclip"></i>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li role="presentation" class="disabled">
+                        <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Generar Reportes">
+                            <span class="round-tab">
+                                <i class="glyphicon glyphicon-cog"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <form role="form">
+                <div class="tab-content">
+                    <div class="tab-pane active" role="tabpanel" id="step1">
+                        <div class="step1">
+                        <div class="row">
+                        	<div class="col-md-3">
+                                <label for="exampleInputEmail1">Rut</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="12345678-9">
+                            </div>
+                        </div>
+                            <div class="row">
+                            <div class="col-md-4">
+                                <label for="exampleInputEmail1">Nombre</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="exampleInputEmail1">Apellido Paterno</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Apellido Paterno">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="exampleInputEmail1">Apellido Materno</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Apellido Materno">
+                        	</div>
+                        </div>
+                        <div class="row">
+                        	<div class="col-md-4">
+                                <label for="exampleInputEmail1">Fecha Nacimiento</label>
+                                <input type="date" class="form-control" id="exampleInputEmail1" placeholder="">
+                        	</div>
+                        	<div class="col-md-4">
+                                <label for="exampleInputEmail1">Profesion/Oficio</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Profesion u Oficio">
+                        	</div>
+                            <div class="col-md-4">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="exampleInputEmail1">Telefono</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Telefono">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="exampleInputEmail1">Direccion</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Direccion">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="exampleInputEmail1">Comuna</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Comuna">
+                            </div>
+                        </div>
+                        </div>
+                        <ul class="list-inline pull-right">
+                            <li><button type="button" class="btn btn-primary next-step">Guardar y Continuar</button></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="step2">
+                        <div class="step2">
+                            @tableSelect()
+                        </div>
+                        <ul class="list-inline pull-right">
+                            <li><button type="button" class="btn btn-default prev-step">Anterior</button></li>
+                            <li><button type="button" class="btn btn-primary next-step">Guardar y Continuar</button></li>
+                        </ul>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="step3">
+                    <div class="row">
+                    <div class="col-md-6">
+                        @uploadform()
+                        </div>
+                        <ul class="list-inline pull-right">
+                            <li><button type="button" class="btn btn-default prev-step">Anterior</button></li>
+                            <li><button type="button" class="btn btn-primary btn-info-full next-step">Guardar y Continuar</button></li>
+                        </ul>
+                    </div>
+                    
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="complete">
+                        <div class="step4">
+                            <h5>Generar Reportes</h5>
+                            <hr>
+                            <div class="container" id="box">
+								<div class="row well">
+									<h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, labore, magni illum nemo ipsum quod voluptates ab natus nulla possimus incidunt aut neque quaerat mollitia perspiciatis assumenda asperiores consequatur soluta Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, labore, magni illum nemo ipsum quod voluptates ab natus nulla possimus incidunt aut neque quaerat mollitia aut perspiciatis assumenda asperiores consequatur soluta. </h5>
+							        
+							         <center>
+							             <button class="btn btn-primary hidden-print" onclick="myFunction()"><span class="glyphicon glyphicon-cog large" aria-hidden="true"></span> Generar Reportes</button>
+								    </center>
+							        
+								</div>
+							</div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </form>
+        </div>
+    </section>
+   </div>
+</div>
+<script>
+function myFunction() {
+    window.print();
+}
+</script>

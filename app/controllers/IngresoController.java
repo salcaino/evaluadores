@@ -11,5 +11,7 @@ public class IngresoController extends Controller {
 		return ok(maincontainer.render(ingreso.render()));
 	}
 	
-	
+	public Result doPost(){
+		return ok("OK WE GOT IT");
+	}
 }
