@@ -2,7 +2,11 @@
   <classpathentry kind="src" path="app"/>
   <classpathentry kind="src" path="conf"/>
   <classpathentry excluding="resources\" kind="src" path="test"/>
-  <classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+  <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\org.scala-lang\scala-library\srcs\scala-library-2.11.11-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.11.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\org.scala-lang\scala-library\docs\scala-library-2.11.11-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
   <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\com.typesafe.play\twirl-api_2.11\srcs\twirl-api_2.11-1.1.1-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.1.1.jar">
     <attributes>
       <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\com.typesafe.play\twirl-api_2.11\docs\twirl-api_2.11-1.1.1-javadoc.jar!/"/>
@@ -76,6 +80,11 @@
   <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\org.joda\joda-convert\srcs\joda-convert-1.8.1-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.8.1.jar">
     <attributes>
       <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\org.joda\joda-convert\docs\joda-convert-1.8.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\org.scala-lang\scala-reflect\srcs\scala-reflect-2.11.11-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.11.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\org.scala-lang\scala-reflect\docs\scala-reflect-2.11.11-javadoc.jar!/"/>
     </attributes>
   </classpathentry>
   <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\srcs\jackson-core-2.7.8-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.7.8.jar">
@@ -329,6 +338,42 @@
       <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\com.typesafe.play\filters-helpers_2.11\docs\filters-helpers_2.11-2.5.14-javadoc.jar!/"/>
     </attributes>
   </classpathentry>
+  <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\srcs\play-java-jdbc_2.11-2.5.14-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.5.14.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\docs\play-java-jdbc_2.11-2.5.14-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\srcs\play-jdbc_2.11-2.5.14-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.5.14.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\docs\play-jdbc_2.11-2.5.14-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\srcs\play-jdbc-api_2.11-2.5.14-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\jars\play-jdbc-api_2.11-2.5.14.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\com.typesafe.play\play-jdbc-api_2.11\docs\play-jdbc-api_2.11-2.5.14-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\com.jolbox\bonecp\srcs\bonecp-0.8.0.RELEASE-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\com.jolbox\bonecp\docs\bonecp-0.8.0.RELEASE-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\com.zaxxer\HikariCP\srcs\HikariCP-2.5.1-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\com.zaxxer\HikariCP\bundles\HikariCP-2.5.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\com.zaxxer\HikariCP\docs\HikariCP-2.5.1-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\com.googlecode.usc\jdbcdslog\srcs\jdbcdslog-1.0.6.2-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\com.googlecode.usc\jdbcdslog\jars\jdbcdslog-1.0.6.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\com.googlecode.usc\jdbcdslog\docs\jdbcdslog-1.0.6.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\com.h2database\h2\srcs\h2-1.4.192-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\com.h2database\h2\jars\h2-1.4.192.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\com.h2database\h2\docs\h2-1.4.192-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="lib" path="C:\Users\salcaino\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar"/>
   <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\org.slf4j\slf4j-log4j12\srcs\slf4j-log4j12-1.7.25-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\org.slf4j\slf4j-log4j12\jars\slf4j-log4j12-1.7.25.jar">
     <attributes>
       <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\org.slf4j\slf4j-log4j12\docs\slf4j-log4j12-1.7.25-javadoc.jar!/"/>
@@ -337,6 +382,36 @@
   <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\log4j\log4j\srcs\log4j-1.2.17-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\log4j\log4j\bundles\log4j-1.2.17.jar">
     <attributes>
       <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\log4j\log4j\docs\log4j-1.2.17-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\org.xerial\sqlite-jdbc\srcs\sqlite-jdbc-3.8.6-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\org.xerial\sqlite-jdbc\jars\sqlite-jdbc-3.8.6.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\org.xerial\sqlite-jdbc\docs\sqlite-jdbc-3.8.6-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\commons-validator\commons-validator\srcs\commons-validator-1.6-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\commons-validator\commons-validator\jars\commons-validator-1.6.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\commons-validator\commons-validator\docs\commons-validator-1.6-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\commons-beanutils\commons-beanutils\srcs\commons-beanutils-1.9.2-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\commons-beanutils\commons-beanutils\jars\commons-beanutils-1.9.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\commons-beanutils\commons-beanutils\docs\commons-beanutils-1.9.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\commons-logging\commons-logging\srcs\commons-logging-1.2-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\commons-logging\commons-logging\docs\commons-logging-1.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\commons-collections\commons-collections\srcs\commons-collections-3.2.2-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\commons-collections\commons-collections\jars\commons-collections-3.2.2.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\commons-collections\commons-collections\docs\commons-collections-3.2.2-javadoc.jar!/"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\commons-digester\commons-digester\srcs\commons-digester-1.8.1-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\commons-digester\commons-digester\jars\commons-digester-1.8.1.jar">
+    <attributes>
+      <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\commons-digester\commons-digester\docs\commons-digester-1.8.1-javadoc.jar!/"/>
     </attributes>
   </classpathentry>
   <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\com.typesafe.play\play-test_2.11\srcs\play-test_2.11-2.5.14-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\com.typesafe.play\play-test_2.11\jars\play-test_2.11-2.5.14.jar">
@@ -387,11 +462,6 @@
   <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\org.apache.httpcomponents\httpcore\srcs\httpcore-4.4.4-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.4.4.jar">
     <attributes>
       <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\org.apache.httpcomponents\httpcore\docs\httpcore-4.4.4-javadoc.jar!/"/>
-    </attributes>
-  </classpathentry>
-  <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\commons-logging\commons-logging\srcs\commons-logging-1.2-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.2.jar">
-    <attributes>
-      <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\commons-logging\commons-logging\docs\commons-logging-1.2-javadoc.jar!/"/>
     </attributes>
   </classpathentry>
   <classpathentry sourcepath="C:\Users\salcaino\.ivy2\cache\org.apache.httpcomponents\httpmime\srcs\httpmime-4.5.2-sources.jar" kind="lib" path="C:\Users\salcaino\.ivy2\cache\org.apache.httpcomponents\httpmime\jars\httpmime-4.5.2.jar">
@@ -528,6 +598,7 @@
       <attribute name="javadoc_location" value="jar:file:C:\Users\salcaino\.ivy2\cache\org.seleniumhq.selenium\selenium-leg-rc\docs\selenium-leg-rc-2.48.2-javadoc.jar!/"/>
     </attributes>
   </classpathentry>
+  <classpathentry kind="lib" path=".\target\scala-2.11\classes_managed"/>
   <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
   <classpathentry kind="output" path="bin"/>
 </classpath>

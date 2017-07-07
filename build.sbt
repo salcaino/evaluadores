@@ -18,5 +18,6 @@ filters,
 javaJdbc,
 "org.slf4j" % "slf4j-api" % "1.7.25",
 "org.slf4j" % "slf4j-log4j12" % "1.7.25",
-"org.xerial" % "sqlite-jdbc" % "3.8.6"
+"org.xerial" % "sqlite-jdbc" % "3.8.6",
+"commons-validator" % "commons-validator" % "1.6"
 )

@@ -1,0 +1,70 @@
+@(cancela : Boolean = false)
+
+<div id="modal" class="modal" style="display:none;">
+        <div class="modal-dialog animated">
+            <div class="modal-content">
+               <div class="modal-header">
+                   <strong><label class="modal-title" id="titleLabel" name="titleLabel">title</label></strong>
+               </div>
+               <div class="modal-body">
+                   <div class="form-group">
+                   <strong><label class="modal-label" id="msgLabel" name="msgLabel">label!</label></strong>
+                   </div>
+               </div>
+               <div class="modal-footer">
+                   <button id="btnCancelar" class="btn btn-default" type="button" onclick="modal.close();">Cancelar</button>
+                   <button id="btnAceptar" class="btn btn-primary" type="button" onclick="modal.close();">Aceptar</button>
+               </div>
+            </div>
+        </div>
+</div>
+ <script type="text/javascript">
+ function popupmensaje(titulo, mensaje, textoCancelar, textoAceptar){
+	$('#titleLabel').text(titulo);
+	$('#msgLabel').text(mensaje);
+	if(textoCancelar != null){
+		$('#btnCancelar').text(textoCancelar);
+		document.getElementById("btnCancelar").style = "display:block;";
+	} else {		
+		document.getElementById("btnCancelar").style = "display:none;";
+	}
+	if(textoAceptar != null){
+		$('#btnAceptar').text(textoAceptar);		
+	} else {		
+		$('#btnAceptar').text('Aceptar');
+	}
+	creaMuestraModal();
+ }
+
+ function creaMuestraModal(){
+ 	var modal = new RModal(document.getElementById('modal'), {
+         beforeOpen: function(next) {
+             console.log('beforeOpen');
+             next();
+         }
+         , afterOpen: function() {
+             console.log('opened');
+         }
+
+         , beforeClose: function(next) {
+             console.log('beforeClose');
+             next();
+         }
+         , afterClose: function() {
+             console.log('closed');
+         }
+          , bodyClass: 'modal-open'
+          , dialogClass: 'modal-dialog'
+         // , dialogOpenClass: 'animated fadeIn'
+         // , dialogCloseClass: 'animated fadeOut'
+
+         , focus: false
+         // , focusElements: ['input.form-control', 'textarea', 'button.btn-primary']
+
+         , escapeClose: true
+     });
+		
+     window.modal = modal;
+     modal.open();
+ }
+ </script>

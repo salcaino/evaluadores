@@ -1,4 +1,5 @@
-@()
+@import naranjalab.form.IngresoForm
+@(userform: Form[IngresoForm])
 
 <div class="container">
     <div class="row">
@@ -40,57 +41,56 @@
                     </li>
                 </ul>
             </div>
-
-            <form role="form">
+            @helper.form(action = routes.IngresoController.doPost()) {
                 <div class="tab-content">
                     <div class="tab-pane active" role="tabpanel" id="step1">
                         <div class="step1">
                         <div class="row">
                         	<div class="col-md-3">
-                                <label for="exampleInputEmail1">Rut</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="12345678-9">
+	                        	@helper.inputText(userform("inputrut"), 'id -> "inputrut", 'class -> "form-control", 
+	                        	'placeholder -> "12345678-9", '_label -> "Rut", '_showConstraints -> false)
                             </div>
                         </div>
                             <div class="row">
                             <div class="col-md-4">
-                                <label for="exampleInputEmail1">Nombre</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre">
+                            	@helper.inputText(userform("nombreinput"), 'id -> "nombreinput", 'class -> "form-control", 
+                            	'placeholder -> "Nombre", '_label -> "Nombre", '_showConstraints -> false)
                             </div>
                             <div class="col-md-4">
-                                <label for="exampleInputEmail1">Apellido Paterno</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Apellido Paterno">
+                            	@helper.inputText(userform("paternoinput"), 'id -> "paternoinput", 'class -> "form-control", 
+                            	'placeholder -> "Apellido Paterno", '_label -> "Apellido Paterno", '_showConstraints -> false)
                             </div>
                             <div class="col-md-4">
-                                <label for="exampleInputEmail1">Apellido Materno</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Apellido Materno">
+                            	@helper.inputText(userform("maternoinput"), 'id -> "maternoinput", 'class -> "form-control", 
+                            	'placeholder -> "Apellido Materno", '_label -> "Apellido Materno", '_showConstraints -> false)
                         	</div>
                         </div>
                         <div class="row">
                         	<div class="col-md-4">
-                                <label for="exampleInputEmail1">Fecha Nacimiento</label>
-                                <input type="date" class="form-control" id="exampleInputEmail1" placeholder="">
+                        		@helper.inputDate(userform("nacimiento"), 'id -> "nacimiento", 'class -> "form-control", 
+                            	'placeholder -> "", '_label -> "Fecha Nacimiento", '_showConstraints -> false)
                         	</div>
                         	<div class="col-md-4">
-                                <label for="exampleInputEmail1">Profesion/Oficio</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Profesion u Oficio">
+                        		@helper.inputText(userform("profesion"), 'id -> "profesion", 'class -> "form-control", 
+                            	'placeholder -> "Profesion u Oficio", '_label -> "Profesion u Oficio", '_showConstraints -> false)
                         	</div>
                             <div class="col-md-4">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                            	@helper.inputText(userform("inputemail"), 'id -> "inputemail", 'class -> "form-control", 
+                            	'placeholder -> "Email", '_label -> "Email", '_showConstraints -> false)
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-4">
-                                <label for="exampleInputEmail1">Telefono</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Telefono">
+                            	@helper.inputText(userform("inputtelefono"), 'id -> "inputtelefono", 'class -> "form-control", 
+                            	'placeholder -> "Telefono", '_label -> "Telefono", '_showConstraints -> false)
                             </div>
                             <div class="col-md-4">
-                                <label for="exampleInputEmail1">Direccion</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Direccion">
+                                @helper.inputText(userform("inputdireccion"), 'id -> "inputdireccion", 'class -> "form-control", 
+                            	'placeholder -> "Direccion", '_label -> "Direccion", '_showConstraints -> false)
                             </div>
                             <div class="col-md-4">
-                                <label for="exampleInputEmail1">Comuna</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Comuna">
+                            	@helper.inputText(userform("inputcomuna"), 'id -> "inputcomuna", 'class -> "form-control", 
+                            	'placeholder -> "Comuna", '_label -> "Comuna", '_showConstraints -> false)
                             </div>
                         </div>
                         </div>
@@ -98,6 +98,7 @@
                             <li><button type="button" class="btn btn-primary next-step">Guardar y Continuar</button></li>
                         </ul>
                     </div>
+                    
                     <div class="tab-pane" role="tabpanel" id="step2">
                         <div class="step2">
                             @tableSelect()
@@ -133,7 +134,7 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-            </form>
+                }
         </div>
     </section>
    </div>

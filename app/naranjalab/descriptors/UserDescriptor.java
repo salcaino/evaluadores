@@ -2,10 +2,11 @@ package naranjalab.descriptors;
 
 public class UserDescriptor {
 	private String username, pwd, role, valid;
-	private int associatedUser = -1;
+	private String associatedUser;
 	private UserDescriptorStatus status = UserDescriptorStatus.GOOD;
 	private String errMsg;
 	private int id;
+	private String nombre, paterno, materno;
 	public UserDescriptor(String username, String pwd, String role, String valid) {
 		this.username = username;
 		this.pwd = pwd;
@@ -13,6 +14,12 @@ public class UserDescriptor {
 		this.valid = valid;
 	}
 	
+	
+	
+	public UserDescriptor(String errMsg) {
+		this.status = UserDescriptorStatus.ERROR;
+		this.errMsg = errMsg;
+	}
 	public UserDescriptor(UserDescriptorStatus status, String errMsg) {
 		this.status = status;
 		this.errMsg = errMsg;
@@ -44,10 +51,10 @@ public class UserDescriptor {
 	public void setValid(String valid) {
 		this.valid = valid;
 	}
-	public int getAssociatedUser() {
+	public String getAssociatedUser() {
 		return associatedUser;
 	}
-	public void setAssociatedUser(int associatedUser) {
+	public void setAssociatedUser(String associatedUser) {
 		this.associatedUser = associatedUser;
 	}
 	public UserDescriptorStatus getStatus() {
@@ -68,11 +75,35 @@ public class UserDescriptor {
 	public void setId(int id) {
 		this.id = id;
 	}
-
+	
 	@Override
 	public String toString() {
 		return "UserDescriptor [username=" + username + ", pwd=" + pwd + ", role=" + role + ", valid=" + valid
 				+ ", associatedUser=" + associatedUser + ", status=" + status + ", errMsg=" + errMsg + ", id=" + id
 				+ "]";
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getPaterno() {
+		return paterno;
+	}
+
+	public void setPaterno(String paterno) {
+		this.paterno = paterno;
+	}
+
+	public String getMaterno() {
+		return materno;
+	}
+
+	public void setMaterno(String materno) {
+		this.materno = materno;
 	}
 }

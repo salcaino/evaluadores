@@ -4,11 +4,13 @@
 
 GET     /				controllers.Default.redirect(to = "/login")
 GET     /login			controllers.LoginController.showLogin
+GET     /logout			controllers.LoginController.logout
 POST    /login			controllers.LoginController.doPost
 GET		/main			controllers.MainContainerController.mainContainer
 GET		/ingreso		controllers.IngresoController.displayForm
 POST    /ingreso		controllers.IngresoController.doPost
-
+GET		/newuser		controllers.CreaUser.displayForm
+POST	/newuser		controllers.CreaUser.postNewUser
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

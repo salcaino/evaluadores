@@ -1,4 +1,6 @@
-@(content: Html)
+@import play.mvc.Http.Session
+@import play.mvc.Http.Flash
+@(content: Html)(implicit flash: Flash, session: Session)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,10 +20,10 @@
 	    <!-- Compiled and minified CSS -->
 		  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
 		
-		  <!-- Compiled and minified JavaScript -->
-		  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+		 
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	    <link rel="stylesheet" href="@routes.Assets.versioned("css/style.css")">
+	    
+	    <link rel="stylesheet" href="@routes.Assets.versioned("bootstrap/css/style.css")">
       	
       	<!-- Bootstrap Core CSS -->
     	<link href="@routes.Assets.versioned("bootstrap/css/bootstrap.min.css")" rel="stylesheet">
@@ -33,9 +35,51 @@
 		
 	    <!-- Custom CSS -->
 	    <link href="@routes.Assets.versioned("bootstrap/css/simple-sidebar.css")" rel="stylesheet">
+		
+
+	    
+	    <!-- jQuery -->
+	    <script src="@routes.Assets.versioned("bootstrap/js/jquery.js")"></script>
+	
+	    <!-- Bootstrap Core JavaScript -->
+	    <script src="@routes.Assets.versioned("bootstrap/js/bootstrap.min.js")"></script>
+	    <!-- Compiled and minified JavaScript -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+	    
+		<!-- Tab form script -->
+		<script src="@routes.Assets.versioned("bootstrap/js/formTab.js")"></script>
+	    <!-- selection table script-->
+		<script src="@routes.Assets.versioned("bootstrap/js/tableSelection.js")"></script>
+	    
+	    	    
+	    <link rel="stylesheet" href="@routes.Assets.versioned("bootstrap/css/animate.css")" type="text/css" />
+
+    	<link rel="stylesheet" href="@routes.Assets.versioned("bootstrap/css/rmodal.css")" type="text/css" />
+    	<script type="text/javascript" src="@routes.Assets.versioned("bootstrap/js/rmodal.js")"></script>
+	    
+	    <script type="text/javascript">
+		    function redirectHim() {
+		    	var id = "@session.get("id")";
+		    	if(id == null || id == ''){
+		    		window.location.replace("/login");
+		    	}
+		    }
+		    window.onload = redirectHim;
+		    
+		    $(document).ready(function(){
+		    	$("#menu-toggle").click(function(e) {
+			        e.preventDefault();
+			        $("#wrapper").toggleClass("toggled");
+			    });
+		    	document.addEventListener('keydown', function(ev) {
+	                modal.keydown(ev);
+	            }, false);
+	    	});
+	    </script>
     </head>
     <body>
-    <div id="wrapper" class="">
+    
+    <div id="wrapper">
     <!-- Sidebar -->
         <div id="sidebar-wrapper" class="black">
             <ul class="sidebar-nav">
@@ -56,41 +100,37 @@
                 <li>
                     <a href="#">Generar Reportes</a>
                 </li>
+                @if(session.get("role") != null && session.get("role") == "admin"){
+	                <li>
+	                    <a href="/newuser">Mantencion de Usuarios</a>
+	                </li>
+                }
                 <li>
                     <a href="#">Configuraciones</a>
+                </li>
+                <li>
+                    <a href="/logout">Cerrar Sesion</a>
                 </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
+        
         <!-- Page Content -->
         <div id="page-content-wrapper">
-        	<a href="#menu-toggle" class="btn-floating btn-small" id="menu-toggle"><i class="small material-icons grey">reorder</i></a>
+        	<a href="#" class="btn-floating btn-small" id="menu-toggle"><i class="small material-icons grey">reorder</i></a>
             <div class="container-fluid">
+            <div id="popupcontainer">
+            @popupmensaje(true)
+            </div>
                 <div class="row">
                     <div class="col-lg-12">
                         @content
                     </div>
                 </div>
+                
             </div>
         </div>
         <!-- /#page-content-wrapper -->
-    </div>
-  <!-- jQuery -->
-    <script src="@routes.Assets.versioned("bootstrap/js/jquery.js")"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="@routes.Assets.versioned("bootstrap/js/bootstrap.min.js")"></script>
-	<!-- Tab form script -->
-	<script src="@routes.Assets.versioned("bootstrap/js/formTab.js")"></script>
-    <!-- selection table script-->
-	<script src="@routes.Assets.versioned("bootstrap/js/selectionTab.js")"></script>
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
-	
+    </div>  
 </body>
 </html>
