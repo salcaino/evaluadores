@@ -10,7 +10,7 @@ import javax.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import naranjalab.common.UserUtilities;
+import naranjalab.common.util.UserUtilities;
 import naranjalab.form.NewUserDescriptor;
 import play.data.Form;
 import play.data.FormFactory;

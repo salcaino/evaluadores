@@ -37,6 +37,9 @@
  }
 
  function creaMuestraModal(){
+	 handler = function(ev){
+    	 modal.keydown(ev);
+     };
  	var modal = new RModal(document.getElementById('modal'), {
          beforeOpen: function(next) {
              console.log('beforeOpen');
@@ -52,6 +55,7 @@
          }
          , afterClose: function() {
              console.log('closed');
+             document.body.removeEventListener('keydown', handler,false);
          }
           , bodyClass: 'modal-open'
           , dialogClass: 'modal-dialog'
@@ -65,6 +69,9 @@
      });
 		
      window.modal = modal;
+       
+     document.body.addEventListener('keydown', handler,false);
+     
      modal.open();
  }
  </script>

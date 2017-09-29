@@ -1,4 +1,4 @@
 *.class
 /target/*
 /project/target/*
-*.log
+*.log/.nb-play.properties

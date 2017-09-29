@@ -1,137 +1,52 @@
-    .margin-top-50 {
-	margin-top: 50px;}
-    /*Filter START*/
-.filterable {
-    margin-top: 15px;
-}
-.filterable .panel-heading .pull-right {
-    margin-top: -20px;
-}
-.filterable .filters input[disabled] {
-    background-color: transparent;
-    border: none;
-    cursor: auto;
-    box-shadow: none;
-    padding: 0;
-    height: auto;
-}
-.filterable .filters input[disabled]::-webkit-input-placeholder {
-    color: #333;
-}
-.filterable .filters input[disabled]::-moz-placeholder {
-    color: #333;
-}
-.filterable .filters input[disabled]:-ms-input-placeholder {
-    color: #333;
-}
-/*Filter END*/
-
-.table-widthB{
-    width: 48%;
-    }
-    
-.table-widthA{
-    width: 48%;
-    }
-    
-.bg{
-    background-color: white;
-    }  
-      
-.tablescroll {
-    overflow-y: auto;
-	overflow-x: hidden;
-	height: 189px;
-	margin-right: 1px;
-}
-.marginTop30{
-    margin-top:30px;
+.panel-table .panel-body{
+  padding:0;
 }
 
-.radio,
-.checkbox {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  }
-  
-  .checkbox,.radio{
-  margin-top:0px;
-  margin-bottom:0px
-  }
-  
-.radio-margin{
-    margin-left: -13px;
-	margin-top: 7px;
-}
-.radio-margin{
-    margin-left: -13px;
-    margin-top: 7px;
-}
-.EU_DataTable td, th {
-  padding: 6px;
-  border: 1px solid #ccc;
-  text-align: left;
-  height: 50px;
-}
-th {
-  background: #e5e5e5;
-  color: #454545;
-  font-weight: bold;
-  height: 40px;
-}
-/*Radio and Checkbox START*/
-.checkbox label:after, 
-.radio label:after {
-    content: '';
-    display: table;
-    clear: both;
+.panel-table .panel-body .table-bordered{
+  border-style: none;
+  margin:0;
 }
 
-.checkbox .cr,
-.radio .cr {
-    position: relative;
-    display: inline-block;
-    border: 1px solid #a9a9a9;
-    border-radius: .25em;
-    width: 1.3em;
-    height: 1.3em;
-    float: left;
-    margin-right: .5em;
+.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type {
+    text-align:center;
+    width: 100px;
 }
 
-.radio .cr {
-    border-radius: 50%;
+.panel-table .panel-body .table-bordered > thead > tr > th:last-of-type,
+.panel-table .panel-body .table-bordered > tbody > tr > td:last-of-type {
+  border-right: 0px;
 }
 
-.checkbox .cr .cr-icon,
-.radio .cr .cr-icon {
-    position: absolute;
-    font-size: .8em;
-    line-height: 0;
-    top: 50%;
-    left: 20%;
+.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type,
+.panel-table .panel-body .table-bordered > tbody > tr > td:first-of-type {
+  border-left: 0px;
 }
 
-.checkbox label input[type="checkbox"],
-.radio label input[type="radio"] {
-    display: none;
+.panel-table .panel-body .table-bordered > tbody > tr:first-of-type > td{
+  border-bottom: 0px;
 }
 
-.checkbox label input[type="checkbox"] + .cr > .cr-icon,
-.radio label input[type="radio"] + .cr > .cr-icon {
-    transform: scale(3) rotateZ(-20deg);
-    opacity: 0;
-    transition: all .3s ease-in;
+.panel-table .panel-body .table-bordered > thead > tr:first-of-type > th{
+  border-top: 0px;
 }
 
-.checkbox label input[type="checkbox"]:checked + .cr > .cr-icon,
-.radio label input[type="radio"]:checked + .cr > .cr-icon {
-    transform: scale(1) rotateZ(0deg);
-    opacity: 1;
+.panel-table .panel-footer .pagination{
+  margin:0; 
 }
 
-.checkbox label input[type="checkbox"]:disabled + .cr,
-.radio label input[type="radio"]:disabled + .cr {
-    opacity: .5;
+/*
+used to vertically center elements, may need modification if you're not using default sizes.
+*/
+.panel-table .panel-footer .col{
+ line-height: 34px;
+ height: 34px;
 }
-/*Radio and Checkbox END*/
+
+.panel-table .panel-heading .col h3{
+ line-height: 20px;
+ height: 20px;
+}
+
+.panel-table .panel-body .table-bordered > tbody > tr > td{
+  line-height: 34px;
+}

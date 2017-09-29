@@ -1,5 +1,5 @@
 login.title=Ingreso Usuarios Evaluadores
-main.title=Bienvenido
+main.title=Evaluaciones
 login.remember=Recordarme
 login.user.placeholder=Usuario o Email
 login.pwd.placeholder=Contraseña

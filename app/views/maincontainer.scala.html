@@ -22,11 +22,12 @@
 		
 		 
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	    
+	     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+	     
 	    <link rel="stylesheet" href="@routes.Assets.versioned("bootstrap/css/style.css")">
       	
       	<!-- Bootstrap Core CSS -->
-    	<link href="@routes.Assets.versioned("bootstrap/css/bootstrap.min.css")" rel="stylesheet">
+    	<link href="@routes.Assets.versioned("bootstrap/css/bootstrap.css")" rel="stylesheet">
 
 		<!-- Tab Form bootstrap -->
 		<link href="@routes.Assets.versioned("bootstrap/css/formStyle.css")" rel="stylesheet">
@@ -56,6 +57,7 @@
 
     	<link rel="stylesheet" href="@routes.Assets.versioned("bootstrap/css/rmodal.css")" type="text/css" />
     	<script type="text/javascript" src="@routes.Assets.versioned("bootstrap/js/rmodal.js")"></script>
+	    <script type="text/javascript" src="@routes.Assets.versioned("bootstrap/js/jquery.mask.min.js")"></script>
 	    
 	    <script type="text/javascript">
 		    function redirectHim() {
@@ -71,9 +73,6 @@
 			        e.preventDefault();
 			        $("#wrapper").toggleClass("toggled");
 			    });
-		    	document.addEventListener('keydown', function(ev) {
-	                modal.keydown(ev);
-	            }, false);
 	    	});
 	    </script>
     </head>
@@ -117,13 +116,13 @@
         
         <!-- Page Content -->
         <div id="page-content-wrapper">
-        	<a href="#" class="btn-floating btn-small" id="menu-toggle"><i class="small material-icons grey">reorder</i></a>
             <div class="container-fluid">
+            <a href="#" class="btn-floating btn-small" style="float: left;" id="menu-toggle"><i class="small material-icons grey">reorder</i></a>
             <div id="popupcontainer">
             @popupmensaje(true)
             </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div>
                         @content
                     </div>
                 </div>

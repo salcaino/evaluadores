@@ -1,0 +1,208 @@
+@import naranjalab.form.IngresoForm
+@(userform: Form[IngresoForm])
+<!-- CSS goes in the document HEAD or added to your external stylesheet -->
+<style type="text/css">
+table.altrowstable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #a9c6c9;
+	border-collapse: collapse;
+}
+table.altrowstable th {
+	border-width: 1px;
+	padding: 0px 0px 0px 0px;
+	border-style: solid;
+	border-color: #a9c6c9;
+	text-align:center;
+}
+table.altrowstable td {
+	border-width: 1px;
+	padding: 1px 1px 1px 5px;
+	border-style: solid;
+	border-color: #a9c6c9;
+	text-align:center;
+}
+table.altrowstable tr {
+	border-width: 1px;
+	padding: 0px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+.oddrowcolor{
+	background-color:#d4e3e5;
+}
+.evenrowcolor{
+	background-color:#c3dde0;
+}
+.glyphicon.glyphicon-erase .glyphicon.glyphicon-remove .glyphicon.glyphicon-unchecked{
+    font-size: auto;
+}
+
+.clickable{
+    cursor: pointer;   
+}
+
+.panel-heading span {
+}
+.label-simbologia {
+font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+}
+.container-table {
+padding: 0px 0px 0px 5px;
+}
+</style>
+<!-- Javascript goes in the document HEAD -->
+<script type="text/javascript">
+
+</script>
+<div id="testIcPanel">
+<table>
+  <tr>
+    <td class="container-table">
+    <table class="altrowstable" id="alternatecolor1">
+	<tr>
+		<th>Nro Pregunta</th><th>1</th><th>2</th><th>3</th>
+	</tr>
+	@for( a <- 0 to 9){
+	<tr>
+	<td>@("Pregunta ".concat((a+1).toString))</td>
+	<td><label style="cursor:pointer" onclick="changeMe(this,@a, 0)"><i id="iconRowa@a" class="material-icons">check_box_outline_blank</i></label></td>
+	<td><label style="cursor:pointer" onclick="changeMe(this,@a, 1)"><i id="iconRowb@a" class="material-icons">check_box_outline_blank</i></label></td>
+	<td><label style="cursor:pointer" onclick="changeMe(this,@a, 2)"><i id="iconRowc@a" class="material-icons">check_box_outline_blank</i></label></td>
+	</tr>
+	<input type="text" id="ICRespuestas[@a.toString]" name="ICRespuestas[@a.toString]" style="display:none;"></input>
+	}
+	</table>
+    </td>
+    <td class="container-table">
+    <table class="altrowstable" id="alternatecolor2">
+	<tr>
+		<th>Nro Pregunta</th><th>1</th><th>2</th><th>3</th>
+	</tr>
+	@for( a <- 10 to 19){
+	<tr>
+	<td>@("Pregunta ".concat((a+1).toString))</td>
+	<td><label style="cursor:pointer" onclick="changeMe(this,@a, 0)"><i id="iconRowa@a" class="material-icons">check_box_outline_blank</i></label></td>
+	<td><label style="cursor:pointer" onclick="changeMe(this,@a, 1)"><i id="iconRowb@a" class="material-icons">check_box_outline_blank</i></label></td>
+	<td><label style="cursor:pointer" onclick="changeMe(this,@a, 2)"><i id="iconRowc@a" class="material-icons">check_box_outline_blank</i></label></td>
+	</tr>
+	<input type="text" id="ICRespuestas[@a.toString]" name="ICRespuestas[@a.toString]" style="display:none;"></input>
+	}
+	</table>
+    </td>
+    <td class="container-table" style="vertical-align:text-top;">
+    <table>
+    <tr><td>
+    <table class="altrowstable" id="alternatecolor3">
+	<tr>
+		<th>Nro Pregunta</th><th>1</th><th>2</th><th>3</th>
+	</tr>
+	@for( a <- 20 to 24){
+	<tr>
+	<td>@("Pregunta ".concat((a+1).toString))</td>
+	<td><label style="cursor:pointer" onclick="changeMe(this,@a, 0)"><i id="iconRowa@a" class="material-icons">check_box_outline_blank</i></label></td>
+	<td><label style="cursor:pointer" onclick="changeMe(this,@a, 1)"><i id="iconRowb@a" class="material-icons">check_box_outline_blank</i></label></td>
+	<td><label style="cursor:pointer" onclick="changeMe(this,@a, 2)"><i id="iconRowc@a" class="material-icons">check_box_outline_blank</i></label></td>
+	</tr>
+	<input type="text" id="ICRespuestas[@a.toString]" name="ICRespuestas[@a.toString]" style="display:none;"></input>
+	}
+	</table>
+    </td></tr>
+    <tr><td>
+	<label class="label-simbologia">Simbolog&iacute;a</label>
+	<table class="altrowstable" id="alternatecolor4">
+	<tr>
+		<th>S&iacute;mbolo</th><th>Significado</th>
+	</tr>
+	<tr>
+	<td><label><i class="material-icons">check_box_outline_blank</i></label></td>
+	<td>Sin Marcar</td>
+	</tr>
+	<tr>
+	<td><label><i class="material-icons">clear</i></label></td>
+	<td>Marcado</td>
+	</tr>
+	<tr>
+	<td><label><i class="material-icons">format_bold</i></label></td>
+	<td>Borr&oacute;n</td>
+	</tr>
+	</table>
+	</td></tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</div>
+<script type="text/javascript">
+
+function altRows(id){
+	if(document.getElementsByTagName){  
+		
+		var table = document.getElementById(id);  
+		var rows = table.getElementsByTagName("tr"); 
+		 
+		for(i = 0; i < rows.length; i++){          
+			if(i % 2 == 0){
+				rows[i].className = "evenrowcolor";
+			}else{
+				rows[i].className = "oddrowcolor";
+			}      
+		}
+	}
+}
+window.onload=function(){
+	altRows('alternatecolor1');
+	altRows('alternatecolor2');
+	altRows('alternatecolor3');
+	altRows('alternatecolor4');
+}
+function changeMe(elem,indx,column){
+	if($(elem).find('i').text() == 'clear'){
+		$(elem).find('i').text('format_bold');
+		var name = "ICRespuestas[" + indx + "]";
+		var textinput = document.getElementById(name);
+		var str = textinput.value;
+		if(str == null){
+			str = ",,";
+		}
+		var res = str.split(",");
+		res[column] = 'borron';
+		var result = res[0] + ',' + res[1] +',' + res[2];
+		document.getElementById(name).value = result;
+		console.log('result [' + indx + '] val: '+ document.getElementById(name).value);
+	}
+	else if($(elem).find('i').text() == 'format_bold'){
+		$(elem).find('i').text('check_box_outline_blank');
+		var name = "ICRespuestas[" + indx + "]";
+		var textinput = document.getElementById(name);
+		var str = textinput.value;
+		if(str == null){
+			str = ",,";
+		}
+		var res = str.split(",");
+		res[column] = '';
+		var result = res[0] + ',' + res[1] +',' + res[2];
+		document.getElementById(name).value = result;
+		console.log('result [' + indx + '] val: '+ document.getElementById(name).value);
+		
+	}
+	else if($(elem).find('i').text() == 'check_box_outline_blank'){
+		$(elem).find('i').text('clear');
+		var name = "ICRespuestas[" + indx + "]";
+		var textinput = document.getElementById(name);
+		var str = textinput.value;
+		if(str == null){
+			str = ",,";
+		}
+		var res = str.split(",");
+		res[column] = 'marca';
+		var result = res[0] + ',' + res[1] +',' + res[2];
+		document.getElementById(name).value = result;
+		console.log('result [' + indx + '] val: '+ document.getElementById(name).value);
+	}
+}
+</script>

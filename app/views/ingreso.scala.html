@@ -1,6 +1,6 @@
 @import naranjalab.form.IngresoForm
 @(userform: Form[IngresoForm])
-
+<label class="titulo1">Crear Evaluaci&oacute;n</label>
 <div class="container">
     <div class="row">
 		<section>
@@ -8,7 +8,6 @@
             <div class="wizard-inner">
                 <div class="connecting-line"></div>
                 <ul class="nav nav-tabs" role="tablist">
-
                     <li role="presentation" class="active">
                         <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Ingresar Datos">
                             <span class="round-tab">
@@ -101,7 +100,7 @@
                     
                     <div class="tab-pane" role="tabpanel" id="step2">
                         <div class="step2">
-                            @tableSelect()
+                            @tableSelect(userform)
                         </div>
                         <ul class="list-inline pull-right">
                             <li><button type="button" class="btn btn-default prev-step">Anterior</button></li>
@@ -109,16 +108,11 @@
                         </ul>
                     </div>
                     <div class="tab-pane" role="tabpanel" id="step3">
-                    <div class="row">
-                    <div class="col-md-6">
-                        @uploadform()
-                        </div>
-                        <ul class="list-inline pull-right">
-                            <li><button type="button" class="btn btn-default prev-step">Anterior</button></li>
-                            <li><button type="button" class="btn btn-primary btn-info-full next-step">Guardar y Continuar</button></li>
-                        </ul>
-                    </div>
-                    
+                     @uploadTestResultsForm(userform)
+                     <ul class="list-inline pull-right">
+                         <li><button type="button" class="btn btn-default prev-step">Anterior</button></li>
+                         <li><button type="button" class="btn btn-primary btn-info-full next-step">Guardar y Continuar</button></li>
+                     </ul>
                     </div>
                     <div class="tab-pane" role="tabpanel" id="complete">
                         <div class="step4">
@@ -126,13 +120,12 @@
                             <hr>
                             <div class="container" id="box">
 								<div class="row well">
-							             <button class="btn btn-primary hidden-print" onclick="myFunction()"><span class="glyphicon glyphicon-cog large" aria-hidden="true"></span> Generar Reportes</button>
+							             <button class="btn btn-primary hidden-print"><span class="glyphicon glyphicon-cog large" aria-hidden="true"></span> Generar Reportes</button>
 							        
 								</div>
 							</div>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
                 </div>
                 }
         </div>
@@ -143,4 +136,8 @@
 function myFunction() {
     window.print();
 }
+$(document).ready(function(){
+	$('#inputrut').mask('09.999.999-9');
+});
+
 </script>

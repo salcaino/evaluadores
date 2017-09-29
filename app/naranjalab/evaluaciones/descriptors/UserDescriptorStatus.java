@@ -1,4 +1,4 @@
-package naranjalab.descriptors;
+package naranjalab.evaluaciones.descriptors;
 
 public enum UserDescriptorStatus {
 	GOOD,

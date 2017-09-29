@@ -7,10 +7,10 @@ import javax.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import naranjalab.common.UserUtilities;
+import naranjalab.common.util.UserUtilities;
 import naranjalab.common.util.HasherUtility;
-import naranjalab.descriptors.UserDescriptor;
-import naranjalab.descriptors.UserDescriptorStatus;
+import naranjalab.evaluaciones.descriptors.UserDescriptor;
+import naranjalab.evaluaciones.descriptors.UserDescriptorStatus;
 import naranjalab.form.UserForm;
 import play.Configuration;
 import play.data.Form;
@@ -129,6 +129,7 @@ public class LoginController extends Controller {
 		logger.info("User role is {}", userRole);
 		session("role", userRole);
 		session("auxIndx", String.valueOf(result.getId()));
+                session("user", user);
 		return redirect(controllers.routes.MainContainerController.mainContainer());
 	}
 
@@ -145,7 +146,6 @@ public class LoginController extends Controller {
 	private Result loginError(String msg) {
 		logger.info("Returning error msg: {}", msg);
 		flash("err", msg);
-		
 		return ok(views.html.login.render("Ingreso", ff.form(UserForm.class), flash()));
 	}
 }
